@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import silhouette_score, davies_bouldin_score
-from IA_28 import preprocessing, clustering
+from model import preprocessing, clustering
  
 
 st.title("Clustering APP(IA)")
@@ -21,7 +21,7 @@ fetaures = st.multiselect(
     df.columns.tolist()
 )
 
-if len(features)<2:
+if len(fetaures)<2:
     st.warning("select at least 2 features")
     st.stop()
 
